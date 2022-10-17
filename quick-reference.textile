@@ -1,0 +1,201 @@
+h1. Block
+
+h2. Paragraph
+
+paragraph 1 text.
+text text.
+
+paragraph 2 text.
+text text.
+
+p. paragraph 3 text.
+text text.
+
+p. paragraph 4 text.
+text text.
+
+※段落中の改行はbrタグに置き換わる
+
+h2. Section
+
+h1. title
+h2. title
+h3. title
+h4. title
+h5. title
+h6. title
+
+h2. TOC
+
+{{toc}}
+
+h2. Bullet List
+
+* item 1
+** item 1-1
+*** item 1-1-1
+*** item 1-1-2
+** item 1-2
+*** item 1-2-1
+*** item 1-2-2
+* item 2
+
+* new item 1
+
+h2. Ordered List
+
+# item 1
+## item 1-1
+### item 1-1-1
+### item 1-1-2
+## item 1-2
+### item 1-2-1
+### item 1-2-2
+# item 2
+
+# new item 1
+
+h2. Description List
+
+- term := item 1
+- term := item 2
+
+h2. Check List
+
+なし
+
+h2. Literal BLock / Preformatted Block
+
+なし
+
+h2. Block Quote
+
+bq. text
+bq.. text
+
+※bq..は空行を含むことができる
+　次のブロック要素(p.等)まで継続
+
+h2. Code Block
+
+bc. text
+bc.. text
+
+※bc..は空行を含むことができる
+　次のブロック要素(p.等)まで継続
+
+h2. Admonition
+
+なし
+
+h2. Horizontal Line
+
+---
+
+h2. Page Break
+
+なし
+
+h2. Table
+
+|data11|data12|data13|
+|data21|data22|data23|
+
+|_.head1|<.head2|=.head3|>.head4|
+|data11|data12|data13|data14|
+|data21|data22|data23|data24|
+
+h1. Inline
+
+h2. Emphasis
+
+The _emphasis_ text.
+The __emphasis__ text.
+
+※_はemタグ、__はiタグ
+
+h2. Strong
+
+The *strong* text.
+The **strong** text.
+
+※*はstrongタグ、**はbタグ
+
+h2. Emhasis + Strong
+
+The _*em+strong*_ text.
+The __**em+strong**__ text.
+
+h2. Superscript
+
+The ^super^ text.
+
+h2. Subscript
+
+The ~sub~ text.
+
+h2. Underline
+
+The +under+ text.
+
+h2. Strikeout
+
+The -strike- text.
+
+h2. Line Break
+
+The line 1.
+The line 2.
+
+※改行はそのままbrタグになる
+
+h2. Code
+
+The @code@ text.
+
+h2. Quote
+
+The ??quote?? text.
+
+h2. Keyboard / Button / Menu
+
+なし
+
+h2. Hyper Link
+
+“text”:url
+
+h2. Cross Reference
+
+なし
+
+h2. Image
+
+!url(alttext)!
+!url!
+
+h2. Footnote
+
+text text.[1]
+text text.[2]
+text text.[2]
+
+fn1. footnote-text
+fn2. footnote-text
+
+h2. Endnote
+
+なし
+
+h2. Reference / Bibliography
+
+なし
+
+h2. Math
+
+なし
+
+h2. No Markup
+
+The ==*no strong*== text.
+<notextile>The *no strong* text.</notextile>
