@@ -245,12 +245,12 @@ text |name| text
 Footnote
 --------
 
-text text.[#1]_
-text text.[#2]_
-text text.[#2]_
+text text.[#f1]_
+text text.[#f2]_
+text text.[#f2]_
 
-.. [#1] footnote-text
-.. [#2] footnote-text
+.. [#f1] footnote-text
+.. [#f2] footnote-text
 
 Endnote
 -------
@@ -260,12 +260,12 @@ Endnote
 Reference / Bibliography
 ------------------------
 
-text text.[1]_
-text text.[2]_
-text text.[2]_
+text text.[c1]_
+text text.[c2]_
+text text.[c2]_
 
-.. [1] biblio-text
-.. [2] biblio-text
+.. [c1] biblio-text
+.. [c2] biblio-text
 
 Math
 ----
