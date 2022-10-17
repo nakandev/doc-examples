@@ -1,0 +1,260 @@
+= Block
+
+== Paragraph
+
+paragraph 1 text.
+text text.
+
+paragraph 2 text.
+text text.
+
+== Section
+
+= title
+== title
+=== title
+==== title
+===== title
+====== title
+
+== TOC
+
+:toc:
+
+※Asciidoctor拡張
+
+== Bullet List
+
+* item 1
+** item 1-1
+*** item 1-1-1
+*** item 1-1-2
+** item 1-2
+*** item 1-2-1
+*** item 1-2-2
+* item 2
+
+//-
+
+* new item 1
+
+※シンボルには*+-を使用可能
+※シンボルの文字数とレベルは無関係
+　同じ文字＆文字数で同じレベル
+
+== Ordered List
+
+. item 1
+.. item 1-1
+... item 1-1-1
+... item 1-1-2
+.. item 1-2
+... item 1-2-1
+... item 1-2-2
+. item 2
+
+//-
+
+. new item 1
+
+※シンボルの文字数とレベルは無関係
+　同じ文字＆文字数で同じレベル
+
+== Description List
+
+term:: item 1
+term::: item 1-1
+term:::: item 1-1-1
+term:::: item 1-1-2
+term::: item 1-2
+term:::: item 1-2-1
+term:::: item 1-2-2
+term:: item 2
+
+//-
+
+term:: new item 1
+
+※:の文字数とレベルは無関係
+　シンボルに使える記号は :: ::: :::: ;; の4種のみ(4レベルのみ)
+
+== Check List
+
+* [ ] no-checked
+* [x] checked
+* [*] checked too
+
+== Literal BLock / Preformatted Block
+
+....
+literal text
+literal text
+....
+
+ literal text
+ literal text
+
+※行頭に空白はAsciidoctor拡張
+
+== Block Quote
+
+[quote]
+----
+text
+----
+
+> text
+> text
+>> text
+
+== Code Block
+
+[source,lang]
+----
+text
+----
+
+== Admonition
+
+WARNING: text
+
+[WARNING]
+----
+text
+----
+
+※NOTE, TIP, IMPORTANT, CAUTION, 　WARNING を指定可能
+
+== Horizontal Line
+
+'''
+
+== Page Break
+
+<<<
+
+== Table
+
+[%noheader]
+|===
+|data11 |data12 |data13
+
+|data21 |data22 |data23
+|===
+
+|===
+|head1
+|head2
+|head3
+|head4
+
+|data11
+|data12
+|data13
+|data14
+
+|data21
+|data22
+|data23
+|data24
+|===
+
+※オプション指定がない場合1行目がヘッダになる
+
+= Inline
+
+== Emphasis
+
+The _emphasis_ text.
+空白なし__強調__テキスト
+
+== Strong
+
+The *strong* text.
+空白なし**重要**テキスト
+
+== Emhasis + Strong
+
+The _*em+strong*_ text.
+空白なし__**強調＋重要**__テキスト
+
+== Superscript
+
+The ^super^ text.
+
+== Subscript
+
+The ~sub~ text.
+
+== Underline
+
+The [.underline]#under# text.
+
+== Strikeout
+
+The [.line-through]#strike# text.
+
+== Line Break
+
+The line 1.+
+The line 2.
+
+== Code
+
+The `code` text.
+
+== Quote
+
+なし
+
+== Keyboard / Button / Menu
+
+Type kbd:[Ctrl+A].
+Push btn:[OK].
+Select menu:[File > Quit].
+
+== Hyper Link
+
+link:url[text]
+
+== Cross Reference
+
+<<Block,text>>
+xref:Block[text]
+
+== Image
+
+Image in pagarraph: image:url[alttext]
+
+image::url[alttext] ※ブロック要素
+
+== Footnote
+
+text text.footnote:[footnote-text]
+
+text text.footnote:id2[footnote-text]
+text text.footnote:id2[]
+
+== Endnote
+
+なし
+
+== Reference / Bibliography
+
+text text.<<1>>
+text text.<<2>>
+text text.<<2>>
+
+[bibliography]
+* [[[1]]] biblio-text
+* [[[2]]] biblio-text
+
+※Asciidoctor拡張
+
+== Math
+
+stem:[e^i{\pi} + 1 = 0]
+
+== No Markup
+
+The +++*no strong*+++ text.
