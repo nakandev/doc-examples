@@ -1,6 +1,11 @@
-= Block
+= Document Title
+:toc: macro
+:experimental:
+:stem: latexmath
 
-== Paragraph
+== Block
+
+=== Paragraph
 
 paragraph 1 text.
 text text.
@@ -8,22 +13,31 @@ text text.
 paragraph 2 text.
 text text.
 
-== Section
+=== Section
 
-= title
 == title
 === title
 ==== title
 ===== title
 ====== title
+======= title
 
-== TOC
+## title
+### title
+#### title
+##### title
+###### title
+####### title
 
-:toc:
+※#で始まるmarkdown形式はAsciidoctor拡張
+
+=== TOC
+
+toc::[]
 
 ※Asciidoctor拡張
 
-== Bullet List
+=== Bullet List
 
 * item 1
 ** item 1-1
@@ -42,7 +56,7 @@ text text.
 ※シンボルの文字数とレベルは無関係
 　同じ文字＆文字数で同じレベル
 
-== Ordered List
+=== Ordered List
 
 . item 1
 .. item 1-1
@@ -60,7 +74,7 @@ text text.
 ※シンボルの文字数とレベルは無関係
 　同じ文字＆文字数で同じレベル
 
-== Description List
+=== Description List
 
 term:: item 1
 term::: item 1-1
@@ -78,13 +92,13 @@ term:: new item 1
 ※:の文字数とレベルは無関係
 　シンボルに使える記号は :: ::: :::: ;; の4種のみ(4レベルのみ)
 
-== Check List
+=== Check List
 
 * [ ] no-checked
 * [x] checked
 * [*] checked too
 
-== Literal BLock / Preformatted Block
+=== Literal BLock / Preformatted Block
 
 ....
 literal text
@@ -96,7 +110,7 @@ literal text
 
 ※行頭に空白はAsciidoctor拡張
 
-== Block Quote
+=== Block Quote
 
 [quote]
 ----
@@ -105,16 +119,26 @@ text
 
 > text
 > text
->> text
+>
+> > text
 
-== Code Block
+※>で始まるmarkdown形式はAsciidoctor拡張。
+ただし入れ子にする場合でも1行空白行が必要。
+
+=== Code Block
 
 [source,lang]
 ----
 text
 ----
 
-== Admonition
+```
+text
+```
+
+※`3つで囲むmarkdown形式はAsciidoctor拡張
+
+=== Admonition
 
 WARNING: text
 
@@ -125,23 +149,21 @@ text
 
 ※NOTE, TIP, IMPORTANT, CAUTION, 　WARNING を指定可能
 
-== Horizontal Line
+=== Horizontal Line
 
 '''
 
-== Page Break
+=== Page Break
 
 <<<
 
-== Table
+=== Table
 
 [%noheader]
 |===
 |data11 |data12 |data13
 |data21 |data22 |data23
 |===
-
-
 
 |===
 |head1 |head2 |head3 |head4
@@ -159,100 +181,106 @@ text
 
 ※オプション指定がない場合1行目がヘッダになる
 
-= Inline
+== Inline
 
-== Emphasis
+=== Emphasis
 
 The _emphasis_ text.
 空白なし__強調__テキスト
 
-== Strong
+=== Strong
 
 The *strong* text.
 空白なし**重要**テキスト
 
-== Emhasis + Strong
+=== Emhasis + Strong
 
 The _*em+strong*_ text.
 空白なし__**強調＋重要**__テキスト
 
-== Superscript
+=== Superscript
 
 The ^super^ text.
 
-== Subscript
+=== Subscript
 
 The ~sub~ text.
 
-== Underline
+=== Underline
 
 The [.underline]#under# text.
 
-== Strikeout
+=== Strikeout
 
 The [.line-through]#strike# text.
 
-== Line Break
+=== Line Break
 
 The line 1.+
 The line 2.
 
-== Code
+=== Code
 
 The `code` text.
 
-== Quote
+=== Quote
 
 なし
 
-== Keyboard / Button / Menu
+=== Keyboard / Button / Menu
 
-Type kbd:[Ctrl+A].
+Type kbd:[Ctrl+Q].
 Push btn:[OK].
-Select menu:[File > Quit].
+Select menu:File[Quit].
+Select menu:File[].
 
-== Hyper Link
+=== Hyper Link
 
 link:url[text]
 
-== Cross Reference
+=== Cross Reference
 
 <<Block,text>>
 xref:Block[text]
 
-== Image
+=== Image
 
-Image in pagarraph: image:url[alttext]
+Image in pagarraph: image:image.png[alttext]
 
-image::url[alttext] ※ブロック要素
+image::image.png[alttext]
+※ブロック要素
 
-== Footnote
+=== Footnote
 
+```
 text text.footnote:[footnote-text]
 
 text text.footnote:id2[footnote-text]
 text text.footnote:id2[]
+```
 
-== Endnote
+not working correctly with asciidoctor-pdf
+
+=== Endnote
 
 なし
 
-== Reference / Bibliography
+=== Reference / Bibliography
 
-text text.<<1>>
-text text.<<2>>
-text text.<<2>>
+text text.<<a1>>
+text text.<<a2>>
+text text.<<a2>>
 
 [bibliography]
-* [[[1]]] biblio-text
-* [[[2]]] biblio-text
+* [[[a1,1]]] biblio-text
+* [[[a2,2]]] biblio-text
 
 ※Asciidoctor拡張
 
-== Math
+=== Math
 
-stem:[e^i{\pi} + 1 = 0]
+stem:[e^{i\pi} + 1 = 0]
 
-== No Markup
+=== No Markup
 
 The +++*no strong*+++ text.

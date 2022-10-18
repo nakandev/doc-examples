@@ -23,7 +23,7 @@ Alt heading 1
 Alt heading 2
 -------------
 
-## 目次
+## TOC
 
 なし
 
@@ -117,7 +117,7 @@ text
 
 なし
 
-## 水平線
+## Horizontal Line
 
 ---
 ___
@@ -201,7 +201,8 @@ The `code` text.
 
 ## Hyper Link
 
-[text](url)
+[text](https://github.com)
+[](https://github.com)
 
 ## Cross Reference
 
@@ -209,8 +210,8 @@ The `code` text.
 
 ## Image
 
-![GitHub](https://github.com/)
-![](https://github.com/)
+![image](image.png)
+![](image.png)
 
 ## Footnote
 
@@ -233,7 +234,7 @@ text text.[^2]
 
 ## Math
 
-$$e^i\pi + 1 = 0$$
+$$e^{i\pi} + 1 = 0$$
 
 ※Pandoc拡張
 

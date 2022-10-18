@@ -32,12 +32,17 @@ Bullet List
 -----------
 
 * item 1
+
   * item 1-1
+
     * item 1-1-1
     * item 1-1-2
+
   * item 1-2
+
     * item 1-2-1
     * item 1-2-2
+
 * item 2
 
 * new item 1
@@ -48,12 +53,17 @@ Ordered List
 ------------
 
 #. item 1
+
    #. item 1-1
+
       #. item 1-1-1
       #. item 1-1-2
+
    #. item 1-2
+
       #. item 1-2-1
       #. item 1-2-2
+
 #. item 2
 
 #. new item 1
